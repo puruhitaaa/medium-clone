@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .home-main {
+    @apply max-w-7xl mx-auto;
+  }
+  .header {
+    @apply flex justify-between p-5;
+  }
+  .header-brand {
+    @apply flex items-center space-x-5;
+  }
+  .header-nav {
+    @apply hidden md:inline-flex items-center space-x-5;
+  }
+  .header-navItem {
+    @apply cursor-pointer;
+  }
+  .header-icon {
+    @apply w-44 cursor-pointer object-contain;
+  }
+  .header-cta {
+    @apply flex items-center space-x-5 text-green-600;
+  }
+  .btn-filled {
+    @apply text-white bg-green-600 hover:bg-green-700 transition-colors ease-out px-4 py-1 rounded-full cursor-pointer;
+  }
+  .btn-outline {
+    @apply border border-green-600 hover:bg-green-600 hover:text-white transition-colors ease-out px-4 py-1 rounded-full cursor-pointer;
+  }
+  .hero {
+    @apply flex justify-between items-center bg-yellow-400 border-y border-black py-10 lg:py-0;
+  }
+  .hero-left {
+    @apply px-10 space-y-5;
+  }
+  .hero-h1 {
+    @apply text-6xl font-serif max-w-xl;
+  }
+  .hero-span {
+    @apply underline decoration-black decoration-4;
+  }
+  .hero-img {
+    @apply hidden md:inline-flex h-32 lg:h-full;
+  }
+  .posts {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6;
+  }
+  .posts-wrapper {
+    @apply border rounded-lg cursor-pointer overflow-hidden;
+  }
+  .post-mainImage {
+    @apply h-60 w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-105;
+  }
+  .post-content {
+    @apply flex justify-between p-5 bg-white;
+  }
+  .post-content-title {
+    @apply text-lg font-bold;
+  }
+  .post-content-description {
+    @apply text-xs;
+  }
+  .post-content-avatar {
+    @apply h-12 w-12 rounded-full;
+  }
+  .post-item {
+    @apply max-w-3xl mx-auto p-5 space-y-2.5;
+  }
+  .post-item-title {
+    @apply text-3xl mt-10 mb-3;
+  }
+  .post-item-description {
+    @apply text-xl font-light text-gray-500 mb-2;
+  }
+  .post-item-info {
+    @apply flex items-center space-x-2;
+  }
+  .post-item-avatar {
+    @apply h-10 w-10 rounded-full;
+  }
+}
